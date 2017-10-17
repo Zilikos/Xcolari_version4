@@ -17,8 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ContainerActivity" />
-
-
         <activity
             android:name=".CreateAccountActivity"
             android:parentActivityName=".MainActivity">
@@ -26,6 +24,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".AnadirActividad"></activity>
     </application>
 
 </manifest>

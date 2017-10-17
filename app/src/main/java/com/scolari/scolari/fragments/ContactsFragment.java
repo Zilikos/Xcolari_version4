@@ -1,12 +1,15 @@
 package com.scolari.scolari.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.scolari.scolari.AnadirActividad;
+import com.scolari.scolari.CreateAccountActivity;
 import com.scolari.scolari.R;
 
 /**
@@ -26,5 +29,7 @@ public class ContactsFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_contacts, container, false);
     }
+
+
 
 }

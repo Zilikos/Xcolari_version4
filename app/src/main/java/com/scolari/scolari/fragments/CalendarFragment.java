@@ -1,7 +1,9 @@
 package com.scolari.scolari.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.scolari.scolari.Adapter.ListaActividadRecycler;
+import com.scolari.scolari.AnadirActividad;
 import com.scolari.scolari.R;
 import com.scolari.scolari.model.ListaActividad;
 
@@ -19,6 +22,8 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class CalendarFragment extends Fragment {
+
+    private FloatingActionButton fabNewAct;
 
 
     public CalendarFragment() {
@@ -33,6 +38,8 @@ public class CalendarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_calendar, container, false);
         RecyclerView actividadRecycler = (RecyclerView) view.findViewById(R.id.actividadRecycler);
 
+        fabNewAct = (FloatingActionButton) view.findViewById(R.id.fabNewAct);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
@@ -44,6 +51,16 @@ public class CalendarFragment extends Fragment {
 
         actividadRecycler.setAdapter(listaActividadRecycler);
 
+
+        fabNewAct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), AnadirActividad.class);
+                //here
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
