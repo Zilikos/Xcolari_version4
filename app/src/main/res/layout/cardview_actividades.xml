@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:id="@+id/prictureCard"
-    android:layout_width="match_parent"
+    android:layout_width="200dp"
     android:layout_height="@dimen/height_cardview"
     cardview:cardCornerRadius="@dimen/cornerradius_cardview"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -17,15 +17,7 @@
         android:layout_height="match_parent"
         >
 
-        <ImageView
-            android:id="@+id/pictureCard"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/height_cardview"
-
-            android:scaleType="centerCrop"
-            />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -36,28 +28,38 @@
             >
 
 
-
-
-
-
                 <TextView
                     android:id="@+id/titleAct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/titlemateria_name"
                     android:textColor="@android:color/black"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:layout_marginLeft="@dimen/timecard_marginleft_card"
                     />
 
 
             <ImageView
+                android:id="@+id/menuAct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_plus"
+                android:src="@drawable/ic_menu"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/titleAct"
+
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/pictureCardAct"
+            android:layout_width="190dp"
+            android:layout_height="144dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_circle"
+
+
+            />
 
 
     </FrameLayout>

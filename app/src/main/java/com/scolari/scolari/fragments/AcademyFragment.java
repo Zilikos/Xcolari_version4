@@ -7,17 +7,23 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.scolari.scolari.Adapter.PictureAdapterRecyclerView;
 import com.scolari.scolari.AnadirActividad;
 import com.scolari.scolari.ContainerActivity;
 import com.scolari.scolari.CreateAccountActivity;
 import com.scolari.scolari.MainActivity;
 import com.scolari.scolari.R;
+import com.scolari.scolari.model.CreatActivity;
 
+import java.util.ArrayList;
 
 
 /**
@@ -41,9 +47,23 @@ public class AcademyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_academy, container, false);
         showToolbar(getResources().getString(R.string.tab_home) ,false, view);
-
-
         fabNewAct = (FloatingActionButton) view.findViewById(R.id.fabNewAct);
+        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
+
+
+
+       /* LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL); */
+
+        GridLayoutManager glm = new GridLayoutManager(getContext(), 2);
+
+        picturesRecycler.setLayoutManager(glm);
+
+        PictureAdapterRecyclerView pictureAdapterRecyclerView = new PictureAdapterRecyclerView(buidPictures(), R.layout.cardview_actividades, getActivity());
+
+
+
+        picturesRecycler.setAdapter(pictureAdapterRecyclerView);
 
 
 
@@ -63,8 +83,17 @@ public class AcademyFragment extends Fragment {
     }
 
 
+    public ArrayList<CreatActivity> buidPictures(){
+        ArrayList<CreatActivity> pictures = new ArrayList<>();
+        pictures.add(new CreatActivity( 10, "Hacer la tesis", 11 ));
+        pictures.add(new CreatActivity( 10, "Proyectos Maria", 11 ));
+        pictures.add(new CreatActivity( 10, "Ir de compras", 11 ));
 
 
+
+        return pictures;
+
+    }
 
 
 
@@ -75,8 +104,5 @@ public class AcademyFragment extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
 
     }
-
-
-
-
+    
 }
