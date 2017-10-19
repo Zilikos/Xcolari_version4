@@ -48,6 +48,7 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
 
     }
 
+
     @Override
     public int getItemCount() {
         return pictures.size();

@@ -5,8 +5,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:id="@+id/prictureCard"
-    android:layout_width="200dp"
-    android:layout_height="@dimen/height_cardview"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
     cardview:cardCornerRadius="@dimen/cornerradius_cardview"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
     >
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_menu"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/titleAct"
 
                 />
@@ -53,8 +53,8 @@
 
         <ImageView
             android:id="@+id/pictureCardAct"
-            android:layout_width="190dp"
-            android:layout_height="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_circle"
 
