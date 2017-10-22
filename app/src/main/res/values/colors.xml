@@ -8,5 +8,8 @@
     <color name="backgroundtext_card">#53292929</color>
     <color name="bottombarselected">#E1BEE7</color>
 
+    <color name="negro_semitransparente">#B2000000</color>
+    <color name="blanco">#fafafa</color>
+
 
 </resources>

@@ -40,4 +40,5 @@ dependencies {
     compile 'com.zoonref:simple-view-behavior:1.0'
     compile 'com.applandeo:material-calendar-view:1.1.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
 }

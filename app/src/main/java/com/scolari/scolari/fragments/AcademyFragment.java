@@ -47,7 +47,6 @@ public class AcademyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_academy, container, false);
         showToolbar(getResources().getString(R.string.tab_home) ,false, view);
-        fabNewAct = (FloatingActionButton) view.findViewById(R.id.fabNewAct);
         RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
 
 
@@ -64,18 +63,6 @@ public class AcademyFragment extends Fragment {
 
 
         picturesRecycler.setAdapter(pictureAdapterRecyclerView);
-
-
-
-        fabNewAct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(v.getContext(), AnadirActividad.class);
-                //here
-                startActivity(intent);
-            }
-        });
 
 
 
