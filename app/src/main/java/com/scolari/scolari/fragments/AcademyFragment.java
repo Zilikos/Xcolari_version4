@@ -66,6 +66,7 @@ public class AcademyFragment extends Fragment {
 
 
 
+
         return view;
     }
 
