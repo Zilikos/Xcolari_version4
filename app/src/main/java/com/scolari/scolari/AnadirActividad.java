@@ -50,7 +50,7 @@ public class AnadirActividad extends AppCompatActivity  implements View.OnClickL
 
     public void createActividad (View v){
         ListActividad listActividad = new ListActividad(databaseReference.push().getKey() , "Avances Tesis", false);
-        databaseReference.child(LIST_ACT).child(listActividad.getTitulo()).setValue(listActividad);
+        databaseReference.child(LIST_ACT).child(listActividad.getTitulo()).setValue(listActividad);// como se van ingresando
 
     }
 
