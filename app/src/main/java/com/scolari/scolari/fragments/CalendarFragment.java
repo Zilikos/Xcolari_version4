@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.scolari.scolari.Adapter.ListaActividadRecycler;
 import com.scolari.scolari.AnadirActividad;
 import com.scolari.scolari.R;
+import com.scolari.scolari.model.ListActividad;
 import com.scolari.scolari.model.ListaActividad;
 
 import java.util.ArrayList;
@@ -65,11 +66,12 @@ public class CalendarFragment extends Fragment {
         return view;
     }
 
-    public ArrayList<ListaActividad> buidPictures(){
-        ArrayList<ListaActividad> pictures = new ArrayList<>();
-        pictures.add(new ListaActividad("15 de noviembre 2017", "Avance de Tesis" ));
-        pictures.add(new ListaActividad("19 de octubre 2017","Avance del Proyecto "));
-        pictures.add(new ListaActividad( "16 de octibre 2017","Examen de cuper"));
+    public ArrayList<ListActividad> buidPictures(){
+        ArrayList<ListActividad> pictures = new ArrayList<>();
+        pictures.add(new ListActividad( "Avance de Tesis", "15 de noviembre 2017", false));
+        pictures.add(new ListActividad("Avance del Proyecto ", "19 de octubre 2017",false));
+        pictures.add(new ListActividad("Examen de Cerdina ", "1 noviembre 2017",false));
+
 
         return pictures;
 

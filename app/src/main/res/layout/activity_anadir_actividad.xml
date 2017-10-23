@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.scolari.scolari.CreateAccountActivity">
+    tools:context="com.scolari.scolari.AnadirActividad">
 
     <include layout="@layout/actionbar_toolbar"></include>
 
@@ -149,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/text_button_creatAct"
                 android:theme="@style/RaisedButtonDark"
+                android:onClick="createActividad"
                 />
 
 

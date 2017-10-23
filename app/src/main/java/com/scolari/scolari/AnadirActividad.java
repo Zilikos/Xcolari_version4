@@ -14,13 +14,19 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.scolari.scolari.fragments.AcademyFragment;
+import com.scolari.scolari.model.ListActividad;
 
 public class AnadirActividad extends AppCompatActivity  implements View.OnClickListener{
 
     Button b_fecha,b_hora;
     EditText e_fecha,e_hora;
     private int dia,mes,anio,hora,minutos;
+    private static final String LIST_ACT =  "LisActividades";
+
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,16 @@ public class AnadirActividad extends AppCompatActivity  implements View.OnClickL
         b_fecha.setOnClickListener(this);
         b_hora.setOnClickListener(this);
 
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true); //aqui es para cuando no hay internet
+        databaseReference = FirebaseDatabase.getInstance().getReference(); // aqui estamos dcienidole que vaya a la URL
+
+
+    }
+
+    public void createActividad (View v){
+        ListActividad listActividad = new ListActividad(databaseReference.push().getKey() , "Avances Tesis", false);
+        databaseReference.child(LIST_ACT).child(listActividad.getTitulo()).setValue(listActividad);
 
     }
 
@@ -71,7 +87,12 @@ public class AnadirActividad extends AppCompatActivity  implements View.OnClickL
         }
     }
 
+
+
+
     }
+
+
 
 
 
