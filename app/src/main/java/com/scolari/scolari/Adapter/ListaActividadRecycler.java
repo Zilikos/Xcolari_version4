@@ -73,7 +73,7 @@ public class ListaActividadRecycler extends RecyclerView.Adapter<ListaActividadR
 
    // public void createActividad(){
      //   ListActividad listActividad = new ListActividad(databaseReference.push().getKey() , "Avances Tesis", false);
-      //  databaseReference.child(LIST_ACT).child(listActividad.getTitulo()).setValue(listActividad);
+      //databaseReference.child(LIST_ACT).child(listActividad.getTitulo()).setValue(listActividad);
 
 //    }
 
